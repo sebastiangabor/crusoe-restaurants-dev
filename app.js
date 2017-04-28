@@ -15,6 +15,10 @@ app.use ('/', function (req,res,next) {
   next();
 });
 
+app.get ('/', function(req,res) {
+  app.send('Hello!');
+})
+
 apiController(app);
 
 mongoose.connect(config.getDbConnectionString());
